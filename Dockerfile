@@ -9,3 +9,7 @@ COPY entrypoint.sh /
 RUN chmod +x /entrypoint.sh
 EXPOSE 2368
 VOLUME /data
+
+ENTRYPOINT ["/entrypoint.sh"]
+
+CMD ["npm", "start"]
