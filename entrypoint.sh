@@ -1,5 +1,7 @@
 #!/bin/bash
 
+[[ $DEBUG ]] && set -x
+
 if [[ -z $SITE_URL ]]; then
     echo "please set your blog site, through system env 'SITE_URL' to set"
     exit 1
@@ -27,5 +29,7 @@ if [[ "$*" == npm*start* ]]; then
 
 	set -- gosu rain "$@"
 fi
+
+sleep ${PAUSE:-0}
 
 exec "npm start"
