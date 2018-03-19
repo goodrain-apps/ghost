@@ -28,4 +28,4 @@ if [[ "$*" == npm*start* ]]; then
 	set -- gosu rain "$@"
 fi
 
-exec "$@"
+exec "npm start"
