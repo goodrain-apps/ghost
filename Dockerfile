@@ -52,9 +52,11 @@ RUN buildDeps=' \
 	
 ENV NODE_ENV production
 
-ADD config.js /tmp/
+COPY config.js /tmp/
 
-COPY docker-entrypoint.sh /entrypoint.sh
+COPY entrypoint.sh /entrypoint.sh
+
+EXPOSE 2368
 
 ENTRYPOINT ["/entrypoint.sh"]
 
