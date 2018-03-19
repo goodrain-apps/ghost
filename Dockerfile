@@ -6,6 +6,6 @@ RUN echo "Asia/Shanghai" > /etc/timezone;dpkg-reconfigure -f noninteractive tzda
     && useradd -u 200 -g 200 rain
 COPY config.js /tmp/
 COPY entrypoint.sh /
-
+RUN chmod +x /entrypoint.sh
 EXPOSE 2368
 VOLUME /data
