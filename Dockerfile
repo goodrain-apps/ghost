@@ -55,6 +55,7 @@ ENV NODE_ENV production
 COPY config.js /tmp/
 
 COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
 EXPOSE 2368
 
